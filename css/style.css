@@ -144,23 +144,12 @@ body{
     z-index: -1;
 }
 .side_i p{
-    
     width: 80%;
 }
 .side_ii{
     width: 100%;
-    
     padding-top: 1.5rem;
     position: relative;
-}
-.side_ii::after{
-    content: '';
-    position: absolute;
-    height: 3em;
-    width: 100%;
-    background:#DF387E;
-    left: 0;
-    bottom: 0%;
 }
 .side_ii h1,
 .side_ii h2{
@@ -181,12 +170,20 @@ body{
 .imh-holder{
     background-image: url('../assets/shot-by-cerqueira-cHY_urj0ePE-unsplash.png');
     background-size: contain;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     width: 100%;
-    height: 80vh;
+    position: relative;
 }
-
+.imh-holder::after{
+    content: '';
+    position: absolute;
+    height: 3em;
+    width: 100%;
+    background:#DF387E;
+    left: 0;
+    bottom: 0%;
+}
 .owl-carousel,
 .blog_slide{
     position: relative;
@@ -381,8 +378,8 @@ footer p{
     .menu-icon{
         display: none;
     }
-    .imh-holder img{
-        width: 70% !important;
+    .imh-holder{
+        height: 80vh;
     }
     .side_i h1{
         font-size: 8em;
@@ -410,6 +407,15 @@ footer p{
     
 }
 @media only screen and (min-width: 1024px) {
+    .side_i::before{
+        content: '';
+        height: 70vh;
+        width: 10em;
+        position: absolute;
+        background-color: #358CF1;
+        left: 20%;
+        z-index: -1;
+    }
     .side_ii::after{
         height: 150px;
     }
