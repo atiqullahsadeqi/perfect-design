@@ -356,6 +356,7 @@ footer p{
 /* Tablet 768 Responsive Point */
 
 @media only screen and (min-width: 768px) {
+
     .nav{
         transform: translateX(0);
         height: 50px;
@@ -377,6 +378,15 @@ footer p{
     }
     .menu-icon{
         display: none;
+    }
+    .imh-holder::after{
+        content: '';
+        position: absolute;
+        height: 6em;
+        width: 100%;
+        background:#DF387E;
+        left: 0;
+        bottom: 0%;
     }
     .imh-holder{
         height: 80vh;
@@ -404,20 +414,20 @@ footer p{
     .slider{
         min-height: 250px;
     }
-    
 }
 @media only screen and (min-width: 1024px) {
     .side_i::before{
         content: '';
-        height: 70vh;
+        height: 60vh;
         width: 10em;
         position: absolute;
         background-color: #358CF1;
         left: 20%;
         z-index: -1;
     }
-    .side_ii::after{
-        height: 150px;
+    .side_i p{
+        margin-left: 45%;
+        width: 75%;
     }
     .side_ii h1,
     .side_ii h2{
@@ -434,10 +444,62 @@ footer p{
         display: none;
     }
     .side_ii h2{
-        left: -115%;
-        bottom: 10%;
+        left: -90%;
+        bottom: 2%;
         font-size: 7em;
-        z-index: -1;
-        
+        z-index: -11;
     }
+}
+@media only screen and (min-width: 1440px) {
+    .side_i{
+        left: 10%;
+    }
+    .side_i p{
+        margin-left: 45%;
+        width: 50%;
+    }
+    .side_i h1{
+        font-size: 10em;
+    }
+    .side_i h2{
+        font-size: 3em;
+        left: 20%;
+    }
+    .side_i h2:nth-child(3){
+        font-size: 7em;
+    }
+}
+
+
+/* About page */
+.about{
+    background: url('../assets/about.png');
+    background-size: cover;
+    background-position: 0% -100% ;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.self-a{
+    margin-top: -100px;
+}
+.m-img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: #2F3136 url('../assets/IMG_0005.JPG');
+    background-position:  left center;
+    background-size: cover;
+    position: relative;
+    border: 5px solid #202225;
+}
+.m-img::before{
+    content: '';
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: #358CF1;
+    transform: rotate(-35deg);
+    left: -100%;
+    z-index: -1;
 }
