@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="mb-5">
+        <div class="nav_toggler  px-3 d-flex justify-content-between align-items-center fixed-top">
+            <a href="" class="brand"><img src="assets/blue logo.jpg" width="35px" alt=""></a>
+            <span class="menu-icon mt-1"><i class="fa fa-bars"></i></span>
+        </div>
+        <div class="nav d-flex justify-content-center align-items-center ml-auto">
+            <ul class="d-flex flex-column flex-md-row align-items-center justify-content-around">
+                <li >
+                    <a href="" class=" nav-link d-flex justify-content-center align-items-center">Home</a>
+                </li>
+                <li >
+                    <a href="" class=" nav-link d-flex justify-content-center align-items-center">About</a>
+                </li>
+                <li>
+                    <a href="" class=" nav-link d-flex justify-content-center align-items-center">Projects</a>
+                </li>
+                <li >
+                    <a href="" class=" nav-link d-flex justify-content-center align-items-center">Blog</a>
+                </li>
+                <li >
+                    <a href="" class=" nav-link d-flex justify-content-center align-items-center">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="about px-5 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-light">Let's Make every Thing Clear!</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit facilis ipsa reprehenderit ipsum, ipsam enim voluptate vel, alias cumque temporibus, officia vitae nesciunt corrupti doloribus repellat itaque numquam ut cupiditate?</p>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid self-a"> 
+        <div class="row d-flex flex-column align-items-center">
+            <div class="m-img">
+                <img src="" alt="">
+            </div>
+            <div class="m-about px-5 text-white mt-5">
+                <h2>Atiqullah Sadeqi</h2>
+                <p class="mb-4">Web Developer</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium debitis dignissimos animi. Dolores doloribus, deleniti quia beatae repudiandae dicta suscipit praesentium quam quo vitae, amet modi illum quae delectus vero!</p>
+            </div>
+        </div>
+    </section> 
+    <section class="container-fluid project mt-5">
+        <div class="row">
+            <div class="bg_style text-light">
+                <div>
+                    <h2 class="mx-3 mt-4">Projects Have Done</h2>
+                </div>
+                <div class="mt-4 px-3">
+                    <h5 >Watch all projects <a href="" class="link">Here</a></h5>
+                </div>
+                <div class="project_slide owl-theme ">
+                    <div class="project_post my-5">
+                        <div class="post_img">
+
+                        </div>
+                        <div class="post_detail  px-3 pt-3">
+                            <h4 class="p_title">
+                                Project name
+                            </h4>
+                            <p class="p_date">
+                                2020.02.19
+                            </p>
+                            <p class="project_live my-2">Watch Project Live <a href="" class="link">Here</a></p>
+                        </div>
+                        <div class="project_footer">
+
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex align-items-center justify-content-center">
+        <p>All Rights Reserved To Perfect Design | 2020</p>
+    </footer>
+    <script>
+         $( document ).ready(function() {
+            $(".menu-icon").click(function(){
+                $(".nav").toggleClass('menu-toggle');
+                $(".nav_toggler").toggleClass('nav-fix');
+                $(".nav-link").toggleClass('nav-fade');
+            })
+        });
+        $('.project_slide').owlCarousel({
+            loop:true,
+            margin:0,
+            nav:false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:1,
+                    nav:false
+                },
+                1000:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                }
+            }
+        })
+    </script>
+</body>
+</html>
