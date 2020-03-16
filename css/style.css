@@ -267,10 +267,10 @@ body{
     border-radius: 50%;
     z-index: -1;
 }
-.bg_style div h2{
+.bg_style div h3{
     display: inline;
 }
-.bg_style h2::before{
+.bg_style h3::before{
     content: '';
     position: absolute;
     width: 8rem;
@@ -279,8 +279,8 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    top: 25%;
-    left: 15%;
+    top: 40%;
+    right: 30%;
 }
 .bg_style .blog_post{
     min-height: 400px;
