@@ -568,13 +568,10 @@ footer p{
     position: relative;
 }
 .contact-form{
-    height: 400px;
+    min-height: 400px;
     width: 350px;
+    margin-bottom: -50px;
     background: #36393F;
-    position: absolute;
-    top: 40%;
-    right: 50%;
-    transform: translateX(50%);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -614,17 +611,25 @@ form button[type="submit"]:hover{
    
 }
 .contact-info p{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .contact-info i{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 @media only screen and (min-width: 768px) {
     .contact-form{
-        top: 30%;
-        right: 0%;
-        transform: translateX(-50%);
         width: 450px;
         height: 500px;
+        margin-bottom: -50px;
+    }
+    .contact-main{
+        padding-right: 100px;
+        justify-content: flex-end !important;
+    }
+    .contact-info p{
+        font-size: 1.5em;
+    }
+    .contact-info i{
+        font-size: 1.3em;
     }
 }
