@@ -255,6 +255,7 @@ body{
     width: 100%;
     background-color: #2F3136;
     position: relative;
+    margin-bottom:450px;
 }
 .bg_style::before{
     content: '';
@@ -310,7 +311,7 @@ body{
     box-shadow: none;
 }
 .all_blog{
-    margin-top: 550px;
+    margin-top: 100px;
 }
 .link{
     color: #DF387E;
@@ -346,7 +347,6 @@ body{
 footer{
     background: #358CF1;
     width: 100%;
-    margin-top: 450px;
     height: 40px;
 }
 footer p{
@@ -472,23 +472,22 @@ footer p{
 
 
 /* About page */
-.about{
-    /* width: 100%; */
-    height: 100vh;
+.about-holder-main{
     position: relative;
-    overflow: hidden;
+    margin-bottom: 100px;
 }
-.about::before{
-    content: '';
-    height: 100%;
-    width: 50%;
-    background: url('../assets/about.png') ;
-    position: absolute;
-    background-size: cover;
-    right: 0;
+
+.about{
+    width: 100%;
+    z-index: 23;
+}
+.about p{
+    font-size: 16px;
 }
 .self-a{
-    margin-top: -100px;
+    position: relative;
+    min-height: 400px;
+    width: 100%;
 }
 .m-img{
     height: 300px;
@@ -498,16 +497,134 @@ footer p{
     background-position:  left center;
     background-size: cover;
     position: relative;
-    border: 5px solid #202225;
+    border: 5px solid #358CF1;
+}
+.m-img::after{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: #358CF1;
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    z-index: -2;
+    
 }
 .m-img::before{
     content: '';
-    position: absolute;
-    height: 350px;
-    width: 350px;
-    border-radius: 15px;
+    height: 5px;
+    width: 100%;
     background-color: #358CF1;
-    transform: rotate(-35deg);
-    left: -100%;
-    z-index: -1;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    z-index: -2;
+    
+}
+@media only screen and (min-width: 768px) {
+    .about-holder-main{
+        display: flex;
+        flex-direction: row !important;
+    }
+    .about{
+        width: 70%;
+    }
+    .self-a::before{
+        width: 400px;
+        height: 400px;
+    }
+    .self-a-inner{
+        display: flex;
+        flex-direction: row !important;
+    }
+
+}
+@media only screen and (min-width: 1080px) {
+    .about-holder-main{
+        width: 80% !important;
+        margin: 0 auto !important;
+    }
+    .about{
+        width: 50%;
+    }
+    .about h1{
+        font-size: 5em;
+    }
+    .m-img{
+        height: 400px;
+        width: 400px;
+    }
+    .m-about{
+        width: 60% !important;
+    }
+}
+
+/* Contact Page */
+.contact-main{
+    height: 80vh;
+    background-image: url('../assets/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.contact-form{
+    height: 400px;
+    width: 350px;
+    background: #36393F;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+form input[type="text"],
+form textarea{
+    background: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    outline: none !important;
+    resize: none;
+    border-bottom: 1px solid #202225 !important;
+}
+form input[type="text"]:focus,
+form textarea:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #358CF1 !important;
+    color: white !important;
+}
+form input[type="text"]::placeholder,
+form textarea::placeholder{
+    color: #BCB1B1;
+}
+form button[type="submit"]{
+    border-radius: 0 !important;
+    background: #202225;
+    border: none;
+}
+form button[type="submit"]:hover{
+    background-color: #DF387E;
+}
+
+.contact-info{
+    background-color: #2F3136;
+    height: 200px;
+   
+}
+.contact-info p{
+    font-size: 1.5em;
+}
+.contact-info i{
+    font-size: 1.3em;
+}
+@media only screen and (min-width: 768px) {
+    .contact-form{
+        top: 30%;
+        right: 0%;
+        transform: translateX(-50%);
+        width: 450px;
+        height: 500px;
+    }
 }
