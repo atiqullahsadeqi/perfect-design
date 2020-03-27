@@ -633,3 +633,123 @@ form button[type="submit"]:hover{
         font-size: 1.3em;
     }
 }
+
+/* Blog page */
+.blog-post{
+    min-height: 300px;
+    width: 100%;
+    background-color: #2F3136;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+.blog-thum{
+    min-height: 300px;
+    width: 100% !important;
+    background-color: #202225;
+    border-radius: 15px;
+}
+.b-title{
+    font-size: 30px;
+}
+.b-date{
+    color: #72767D;
+}
+.b-excrept{
+    font-size: 20px;
+}
+.b-btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background:#202225;
+    font-size: 20px;
+    color: white;
+}
+.b-btn:hover{
+    background-color: #DF387E;
+    text-decoration: none;
+    color: white;
+}
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link{
+    border-radius: 0px !important;
+}
+.pagination .page-item .page-link{
+    margin-left: 5px;
+    background-color: #2F3136;
+    border:none;
+    color: white;
+}
+.pagination .page-item .page-link.active{
+    background-color: #DF387E;
+}
+.cat-title{
+    width: 100%;
+    min-height: 50px;
+    background-color: #358CF1;
+}
+.cat-title p {
+    font-size: 25px;
+    color: white;
+}
+.side-cat{
+    min-height:150px;
+    width:100%;
+    background-color: #36393Fed;
+}
+.cat{
+    min-width: 120px;
+    float: left;
+    background-color: #2F3136;
+    border-radius: 32px;
+
+}
+.cat p{
+    font-size: 20px;
+}
+.cat-sign{
+    float: left;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: white;
+    background-color: #DF387E;
+}
+.ads{
+    min-height: 1000px;
+    width: 100%;
+    background-color: #36393Fed;
+    margin-top: 90px;
+    color: white;
+    font-size: 50px;
+}
+@media only screen and (min-width: 1080px) {
+    .blog-page{
+        display: flex;
+    }
+    .blog-posts{
+       width: 70%;
+    }
+    .blog-post{
+        flex-direction: row;
+        width: 750px;
+    }
+    .blog-d{
+        width:400px ;
+    }
+    .blog-thum{
+        width: 300px !important;
+    }
+    .blog-side-h{
+        width: 30%;
+    }
+    .blog-side{
+        width: 100%;
+    }
+    .blog-d{
+        width: 500px;
+    }
+
+}
